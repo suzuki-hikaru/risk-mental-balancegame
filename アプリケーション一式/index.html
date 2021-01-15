@@ -1,0 +1,74 @@
+<html>
+
+<head>
+  <title>リスク・メンタル バランスゲーム</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body bgcolor="white">
+  <!-- header -->
+  <header>
+    <h1>リスク・メンタル バランスゲーム</h1>
+  </header> <!-- /header -->
+
+  <div class="container wrapper">
+
+    <!-- main -->
+    <main class="col-container">
+      <div id="main-canvas">
+        <p>密集地帯ゾーン（リスク+1 メンタル+1）</p>
+        <h2 id="inform"></h2>
+        <h2 id="sub-inform"></h2>
+      </div>
+      <div id="sub-canvas">
+        <p>家の中（リスク-1 メンタル-1）</p>
+      </div>
+
+    </main> <!-- /endmain -->
+
+    <!-- aside -->
+    <aside>
+      <div class="game-pad">
+        <div id="state">【スタートボタンを押してください】</div>
+        <div id="timer">Timer:25/25</div>
+        <div id="risk">risk:0</div>
+        <div id="mental">mental:0</div>
+        <button onclick="start()">start!!</button>
+        <button onclick="record()">記録</button>
+      </div>
+      <div class="record-list-canvas">
+        <h3>ここに記録されます</h3>
+        <ul id="record-list">
+        </ul>
+      </div>
+    </aside> <!-- /aside -->
+
+
+    <div class="rule-canvas">
+      <h2>- ルール- </h2>
+      <p>①startボタンを押すとゲームが開始します。</p>
+      <p>②一秒ごとにTimerとメンタルが減少します。</p>
+      <p>③白色の欄にいる密集している人のアイコンにあたるとリスクとメンタルが増加します。</p>
+      <p>④同様に緑色の欄にいる頭痛のアイコンにあたるとメンタルとリスクが減少します。</p>
+      <p>⑤ゲームが終了した際に記録ボタンを押すことでtime等のスコアを画面上に記録することができます。</p>
+
+      <h3>ゲーム終了条件</h3>
+      <p>timer:0</p>
+      <p>risk:10以上</p>
+      <p>mental:0以下</p>
+    </div>
+
+  </div>
+
+  <!-- footer -->
+  <footer>
+    <p>©リスク・メンタル バランスゲームゲーム All Rigths Reserved</p>
+  </footer> <!-- /footer -->
+
+  <script src="./index.js"></script>
+  <script src="./start.js"></script>
+</body>
+
+</html>
